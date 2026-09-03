@@ -19,7 +19,7 @@ import {
   buildProofObjects,
 } from '../ubg/apocalypse.js';
 import { surveyBlindspots, coveragePct } from '../ubg/blindspots.js';
-import { premiseFor, withPremiseGaps } from '../ubg/premise.js';
+import { premiseFor, withPremiseGaps, basisFrom } from '../ubg/premise.js';
 import { atomicWriteFileSync as atomicWrite } from '../server/persistence.js';
 
 // version travels with the proof so an audit knows which prover produced it
@@ -86,6 +86,7 @@ export async function runApocalypse(opts) {
     coverage: blind.coverage.ratio,
     blindHigh: blind.byRisk.critical + blind.byRisk.high,
     premiseGaps: premise.available ? premise.gaps.length : 0,
+    premiseBasis: basisFrom(premise),
   });
 
   if (opts.sarif) {
@@ -204,7 +205,7 @@ function toSarif(findings, canonical) {
         tool: {
           driver: {
             name: 'sparda-apocalypse',
-            informationUri: 'https://github.com/zyx77550/sparda',
+            informationUri: 'https://github.com/zakariagharzouli/sparda',
             rules: [...new Set(findings.map((f) => f.rule))].sort().map((id) => ({ id })),
           },
         },

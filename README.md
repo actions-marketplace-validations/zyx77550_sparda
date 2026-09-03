@@ -1,8 +1,6 @@
 # SPARDA
 
-<div align="center">
-  <img src="assets/logo-presentation.png" alt="SPARDA Banner" width="800" />
-</div>
+<div align="center">`r`n  <img src="https://raw.githubusercontent.com/zakariagharzouli/sparda/main/assets/sparda-readme-banner-dark-1600x480.png" alt="SPARDA — AI writes. SPARDA proves." width="800" />`r`n</div>
 
 <br/>
 
@@ -16,7 +14,7 @@
 **The trust layer for AI-written backends.** SPARDA compiles your backend — routes, database queries, state mutations, guards, side-effects — into one deterministic behavior graph, then **statically proves what can and can't break before you ship**: no unguarded mutation, no broken invariant, no non-atomic aggregate write.
 
 [![npm](https://img.shields.io/npm/v/sparda-mcp)](https://www.npmjs.com/package/sparda-mcp)
-[![CI](https://github.com/zyx77550/sparda/actions/workflows/ci.yml/badge.svg)](https://github.com/zyx77550/sparda/actions/workflows/ci.yml)
+[![CI](https://github.com/zakariagharzouli/sparda/actions/workflows/ci.yml/badge.svg)](https://github.com/zakariagharzouli/sparda/actions/workflows/ci.yml)
 ![node](https://img.shields.io/badge/node-%3E%3D18-brightgreen)
 ![runtime deps](https://img.shields.io/badge/runtime%20deps-4%20pinned-4c1)
 [![license](https://img.shields.io/badge/license-BUSL--1.1-blue)](./LICENSE)
@@ -184,7 +182,7 @@ If any Critical or High finding is found, `apocalypse` exits with a non-zero cod
 **One step in your workflow — findings land in the GitHub Security tab (SARIF):**
 
 ```yaml
-- uses: zyx77550/sparda@main
+- uses: zakariagharzouli/sparda@main
   with:
     sarif: 'true'
 ```
@@ -263,11 +261,6 @@ To undo everything: **`npx sparda-mcp remove`** restores your code byte-for-byte
 
 ## The promise — every word is backed by a test in CI
 
-<div align="center">
-  <img src="assets/features-presentation.png" alt="SPARDA Features" width="800" />
-</div>
-
-<br/>
 
 1. **Three minutes, one command.** AST scan, router generation, reversible injection — no config.
 2. **Try it for free, leave for free.** `npx sparda-mcp remove` restores your code **byte-for-byte** (tested on JS, TS, Python, even Windows CRLF files). No trace, no lock-in.
@@ -405,10 +398,5 @@ crippled to upsell you.
 You may not resell SPARDA or offer it as a competing commercial service.
 Each version converts to Apache 2.0 four years after its release.
 
-<div align="center">
-  <img src="assets/github-star.png" alt="Leave a Star" width="600" />
-</div>
-
-<br/>
 
 By [Residual Labs](https://residual-labs.fr)
